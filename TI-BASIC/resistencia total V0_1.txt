@@ -1,0 +1,26 @@
+
+: Disp "R TOTAL"		// Mensaje: Resistencia Total 
+: Disp "1)SERIE"
+: Disp "2)PRLL"
+: Input O
+
+: Disp "NUM R?"			// Mensaje: Numero de Resistencias
+: Input N
+
+: 0 -> S				// Acumulador 
+: for(P,1,N)			
+	: Disp "R NUM",N		
+	: Input R 		
+	: If O == 1
+	: Then
+		: S + R -> S		
+	: Else
+		: S + R^-1 -> S
+	: End
+: End	
+
+If O != 1
+	: S^-1 -> S				
+
+: Disp "R TOTAL" , S
+

@@ -1,0 +1,40 @@
+// PROCESO INGRESO DATOS
+: Disp "DIVISOR V/I"
+// SELECCION TIPO DE CALCULO
+: Disp "1)DIV V"
+: Disp "2)DIV I"
+: Input O 
+			
+: Disp "NUM R?"					// Mensaje: NUMERO RESISTORES?
+: Input N						// Numero de Resistores.
+
+// PROCESO CALCULO RESISTENCIA TOTAL
+: 0 -> S 						// Acumulador Sumatoria Resistencias
+: For( P , 1 , N )					
+	: Disp "NUM R",P			// Resistor Numero P
+ 	: Input R		
+	: If O == 1
+	: Then						// Opcion 1 Divisor de Tension.
+		: R + S -> S			// Resistencia Total Serie.
+	: Else						// Opcion 2 Divisor de Corriente.
+		: R^-1 + S -> S			// Resistencia Total Paralelo.
+	: End
+: End
+
+: Disp "R DIV"					// Resistencia calculo Divisor
+: Input R 
+
+: If O == 1
+: Then 							// Opcion 1 Divisor de Tension.
+	: Disp "V SOURCE?"			// MENSAJE: FUENTE DE VOLTAJE?
+	: Input V			
+	: V * R / S -> A			// Formula divisor tension.
+	: Disp "RESISTOR V"
+: Else							// Opcion 2 Divisor de Corriente.
+	: Disp "I SOURCE?"			// MENSAJE: FUENTE DE VOLTAJE?
+	: Input I	
+	: I * S^-1 / R -> A			// Formula divissor corriente.
+	: Disp "RESISTOR I"
+: End
+
+: Disp A						// Muestra Resultado.
