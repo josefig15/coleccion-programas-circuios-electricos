@@ -5,3 +5,5 @@ Lista de Programas incluidos actualmente:
 1) Divisor de corriente y Voltaje.
 2) Resistencia Equivalente Total en Serie y Paralelo.
 
+Para los programas escritos en TI-BASIC. Los comentarios inician con el Simbolo "//"
+Para los programas escritos en TI-BASIC. Los comentarios inician con el Simbolo "%"
