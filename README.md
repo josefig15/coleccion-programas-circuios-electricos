@@ -4,6 +4,7 @@ Los programas han sido escritos en en lenguaje TI-BASIC, compatible con calculad
 Lista de Programas incluidos actualmente:
 1) Divisor de corriente y Voltaje.
 2) Resistencia Equivalente Total en Serie y Paralelo.
+3) Calculo constante de tiempo circuito RL y RC.
 
 Para los programas escritos en TI-BASIC. Los comentarios inician con el Simbolo "//"
 Para los programas escritos en OCTAVE. Los comentarios inician con el Simbolo "%"
