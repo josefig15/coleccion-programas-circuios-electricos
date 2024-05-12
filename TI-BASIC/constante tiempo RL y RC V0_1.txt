@@ -1,0 +1,25 @@
+// PROGRAMA PARA CALCULAR CONSTANTE DE TIEMPO CIRCUITO RL y RC
+: Disp "CTE TIEMPO"
+: Disp "1)RC"
+: Disp "2)RL"
+: Input O
+
+: Disp "R TOTAL"
+: Input R
+// Circuito RC
+: If O == 1
+: Then 
+	: Prompt C 
+	: K = R*C
+: End
+// Circuito RL
+: If O == 2
+: Then 
+	: Prompt L
+	: K = L/C
+: End
+: T = 5*K
+: Disp "CTE TIEMPO",K
+: Disp "T CARGADO",T
+
+
