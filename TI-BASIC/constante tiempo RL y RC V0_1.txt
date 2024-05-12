@@ -16,7 +16,7 @@
 : If O == 2
 : Then 
 	: Prompt L
-	: K = L/C
+	: K = L/R
 : End
 : T = 5*K
 : Disp "CTE TIEMPO",K
