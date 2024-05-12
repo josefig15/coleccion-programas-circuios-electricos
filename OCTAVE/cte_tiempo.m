@@ -19,7 +19,7 @@ endif
 if O == 2
   input("L? ")
   L = ans;
-  K = L/C;
+  K = L/R;
 endif 
   
 T = 5*K;
