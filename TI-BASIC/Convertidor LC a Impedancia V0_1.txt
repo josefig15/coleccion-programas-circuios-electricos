@@ -1,0 +1,26 @@
+//NOMBRE PROGRAMA: CZLC
+//Programa para calcular las impedancias de L y C para un frecuencia especifica.
+
+: Disp "CALCULO Z"
+: Disp "F[HZ]"	
+: Input F
+: 2*π*F -> W
+: Disp "ELEMENTO?"	 
+: Disp "1)C"
+: Disp "2)L"
+: Input O
+// Cuando Capacitor
+: If O == 1
+	: Prompt C
+	: -i/(W*C) -> Z
+: End
+// Cuando Inductor
+: If O == 2
+	: Prompt L
+	: i*W*L -> Z
+: End
+
+: Disp "IMPEDANCIA Z"
+: Disp Z
+: Disp "W[RAD]"
+: Disp W

@@ -1,0 +1,28 @@
+//NOMBRE PROGRAMA: CXLC
+//Programa para calcular la Capacitancia C e Inductancia L para una frecuencia especifica.
+
+: Disp "CALCULO L,C"
+: Disp "F[HZ]"	
+: Input F
+: 2*π*F -> W
+: Disp "REACTANCIA?"
+: Input X
+: Disp "ELEMENTO?"	 
+: Disp "1)C"
+: Disp "2)L"
+: Input O
+//Capacitancia
+: If O == 1
+	: 1/(W*X)-> C
+	: Disp "CAPACITOR"
+	: Disp C
+: End
+//Inductancia
+: If O == 2
+	: X/W -> L
+	: Disp "INDUCTOR"
+	: Disp L
+: End
+
+: Disp "W[RAD]"
+: Disp W
